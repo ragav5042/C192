@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>VR CAR RACING GAME</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  <script src="./rotation.js"></script>
+  <script src="./cursorEvent.js"></script>
+</head>
+<body>
+    <a-scene id="scene" physics="debug:true">
+        <a-assets>
+        <a-asset-item id="car" src="./race car/hcr_race_car/scene.gltf"></a-asset-item>
+        <!-- <img id="fuel" src="./fuel/scene.gltf"> -->
+        <img  id="rightarrow" src="./assets/ar_right.png" >
+        <img  id="arrowstraight" src="./assets/ar_straight.png" >
+        <img id="cartrack" src="./assets/track.jpg">       
+    </a-assets>
+<a-entity id="environment" environment="preset: japan">
+
+</a-entity>
+<a-entity boxes  ></a-entity>
+<!-- <a-entity cursor-listener></a-entity> -->
+    
+
+  
+    
+    <a-camera id="camera" camera position="0 2.6 0">
+        <a-entity id="weapon" gltf-model="#car" position="0 -2 -0.40" rotation="0 180 0" scale="1 1 1"  ></a-entity>
+        <a-entity position="-1.5 2 -3">
+        <a-entity  text="font: mozillavr; width:5; height: 5; value: Fuel" ></a-entity>
+        <a-plane position="-5 1.8 -3" color="#FF5E00" height="0.2" width="0.2"></a-plane>
+        <a-plane position="-4.5 1.8 -3" color="#FF5E00" height="0.2" width="0.2"></a-plane>
+        <a-plane position="-4 1.8 -3" color="#FF5E00" height="0.2" width="0.2"></a-plane>
+        <a-plane position="-3.5 1.8 -3" color="#FF5E00" height="0.2" width="0.2"></a-plane>
+    </a-entity>
+</a-camera> 
+
+    
+
+
+    </a-scene>
+</body>
+</html>
